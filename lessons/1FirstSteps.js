@@ -59,3 +59,11 @@ b /= 3; // result 2
 document.write('<p>Hola mundo cruel</p>');
 document.write(`<p class="js-text">Hola mundo cruel number ${b}</p>`);
 
+//4th Lesson: Functions
+var myName = 'Aldo', myAge2 = 33;
+//we need to use the structure: function name (param1, paramx) { }
+function printAge(n, a) {
+    console.log(`${n} is ${a}`);
+}
+printAge(myName, myAge2);
+printAge('Erick', 45);
