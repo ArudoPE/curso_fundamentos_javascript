@@ -67,3 +67,14 @@ function printAge(n, a) {
 }
 printAge(myName, myAge2);
 printAge('Erick', 45);
+//this will return "undefined" values
+printAge();
+
+//5th Lesson: Functions scope
+var myName2 = 'Aldo';
+
+function printNameInUpperCase(n){
+    n = n.toUpperCase();
+    console.log(n);
+}
+printNameInUpperCase(myName2);
