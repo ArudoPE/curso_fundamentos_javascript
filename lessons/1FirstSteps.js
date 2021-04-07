@@ -78,3 +78,26 @@ function printNameInUpperCase(n){
     console.log(n);
 }
 printNameInUpperCase(myName2);
+
+//6th Lesson: Objects
+//We declare an object with key and value: var objectName { , };
+var aldo = {
+    personName: 'Aldo',
+    personLastName: 'Ortiz',
+    personAge: 28
+};
+var dario = {
+    personName: 'Darío',
+    personLastName: 'Suskinly',
+    personAge: 34
+}
+//we can use this if we wanna access directly to a part of the object
+//function printObjectNameInUpperCase({ personName }) {
+function printObjectNameInUpperCase(person) {
+    console.log(person.personName.toUpperCase());
+    console.log(person);
+}
+printObjectNameInUpperCase(aldo);
+printObjectNameInUpperCase(dario);
+//creating an attribute when calling a function!
+printObjectNameInUpperCase({ personName: 'Carlos' });
