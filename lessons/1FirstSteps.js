@@ -90,14 +90,51 @@ var dario = {
     personName: 'Darío',
     personLastName: 'Suskinly',
     personAge: 34
-}
+};
 //we can use this if we wanna access directly to a part of the object
 //function printObjectNameInUpperCase({ personName }) {
 function printObjectNameInUpperCase(person) {
-    console.log(person.personName.toUpperCase());
+    var { personName } = person;
+    console.log(personName.toUpperCase());
+    //console.log(person.personName.toUpperCase());
     console.log(person);
 }
 printObjectNameInUpperCase(aldo);
 printObjectNameInUpperCase(dario);
 //creating an attribute when calling a function!
 printObjectNameInUpperCase({ personName: 'Carlos' });
+
+//7th Lesson: Destructuring objects
+//Challenge
+function greetMe (person) {
+    console.log(`Hi, my name is ${person.personName}, and I'm ${person.personAge}\nHow are you?`);
+}
+greetMe(aldo);
+greetMe(dario);
+//8th Lesson: Reference or value parameters
+function birthday(person) {
+    return {
+        ...person,
+        personAge: person.personAge + 1
+    }
+    //person.personAge += 1;
+}
+birthday(aldo);
+
+//9th Lesson: Comparations in JavaScript
+var x = 4;
+var y = '4';
+//this is true, because == compares value, not data type
+console.log(x == y);
+//this is false, because === compares value AND data type
+console.log(x === y);
+
+var sacha = {
+    nombre: 'Sacha'
+};
+
+var anotherPerson = {
+    ...sacha
+};
+//if we compare objets, it compares the REFERENCE not the content
+console.log(sacha==anotherPerson);
