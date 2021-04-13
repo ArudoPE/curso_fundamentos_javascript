@@ -41,13 +41,12 @@ function printProfessions(person) {
     }
 }
 printProfessions(sacha);
-//2nd Lesson
+//3rd Lesson: Arrow Function
 
 const MAYORIA_DE_EDAD = 18;
 
-function esMayorDeEdad(person) {
-    return person.edad >= MAYORIA_DE_EDAD;
-}
+//anonymus function
+const esMayorDeEdad = ({ edad }) => edad >= MAYORIA_DE_EDAD;
 
 function printAdult(person) {
     if (esMayorDeEdad(person)) {
@@ -58,3 +57,10 @@ function printAdult(person) {
 }
 printAdult(sacha);
 printAdult(juan);
+
+function allowAccess(person) {
+    if (!esMayorDeEdad(person)) {
+        console.log('Acceso denegado');
+    }
+}
+allowAccess(juan);
